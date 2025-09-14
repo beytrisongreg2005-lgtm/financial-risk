@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag image-financial-risk:$(date +%s)
+      run: docker build . --file scripts --tag image-financial-risk:$(date +%s)
 
   push_to_registry:
     name: Push Docker image to Docker Hub
